@@ -4,15 +4,15 @@
 <html>
 
 <head>
-	<title>luv2code Company Home Page</title>
+	<title>CMS HOME</title>
 </head>
 
 <body>
-	<h2>luv2code Company Home Page</h2>
+	<h1>Customer Management System</h1>
 	<hr>
 	
 	<p>
-	Welcome to the luv2code company home page!
+	Welcome to Customer Management System !
 	</p>
 	
 	<hr>
@@ -23,6 +23,10 @@
 		User: <security:authentication property="principal.username" />
 		<br><br>
 		Role(s): <security:authentication property="principal.authorities" />
+	</p>
+	
+	<p>
+	<a href = "${pageContext.request.contextPath}/Customer/list" >Customer List</a>
 	</p>
 	
 	<security:authorize access="hasRole('MANAGER')">
